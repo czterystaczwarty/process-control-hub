@@ -1,10 +1,24 @@
-import {
+import type {
   ProcessManager,
   ProcessMethods,
   ProcessState,
   ProcessVariable,
   ProcessVariables,
+  ProcessResponse,
+  ProcessStartRequest,
+  ProcessContinueRequest
 } from './types';
+
+export type {
+  ProcessManager,
+  ProcessMethods,
+  ProcessState,
+  ProcessVariable,
+  ProcessVariables,
+  ProcessResponse,
+  ProcessStartRequest,
+  ProcessContinueRequest
+};
 
 export class ProcessManagerImpl<V extends Record<string, any>, S extends string> implements ProcessManager<V, S> {
   private state: ProcessState<V, S>;
